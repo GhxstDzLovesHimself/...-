@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Photoshop Slide</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        var images=["./images/ice.png","./images/particles.jpeg","./images/drops.png","./images/GeiselInSnow.png","./images/geisel.jpg","./images/road-winter.jpg","./images/MyGIF.gif"];
+        var captions=["Part A: Text Effect","Part A Asset: Particles","Part A Asset: Water Drops","Part B: Geisel in Snow","Part B Asset: Geisel Library","Part B Asset: Snowland","Part C: Cinemagraph"];
+        var i=0;
+        var isLooping=false;
+        var fading=false;
+        var b;
+        var loop = ()=>{
+            var bu = document.getElementById("3");
+            if(!isLooping){
+                bu.innerHTML="Loop: On";
+                bu.className="btn btn-success";
+                b=setInterval(()=>{
+                    change(1);
+                },4000);
+            }else{
+                bu.innerHTML="Loop: Off";
+                bu.className="btn btn-warning";
+                window.clearInterval(b);
+            }
+            isLooping=!isLooping;
+            check();
+        }
+        var next = ()=>{
+            if(i<images.length-1) change(1);
+        }
+        var pre = ()=>{
+            if(i>0) change(-1);
+        }
+        var change = num =>{
+            var img = $("#banner");
+            $("#info")[0].innerHTML="&nbsp";
+            img.fadeOut(500);
+            fading=true;
+            check();
+            setTimeout(()=>{
+                i+=num;
+                img.fadeIn(500);
+                i=i%images.length;
+                img[0].src=images[i];
+                $("#info")[0].innerHTML=captions[i];
+                fading=false;
+                check();
+            },490);
+        }
+        var check = ()=>{
+            if(isLooping||fading){
+                document.getElementById("1").disabled=true;
+                document.getElementById("2").disabled=true;
+                return;
+            }
+            if(i<=0){
+                document.getElementById("1").disabled=true;
+                document.getElementById("2").disabled=false;
+                return;
+            }
+            if(i>=images.length-1){
+                document.getElementById("2").disabled=true;
+                document.getElementById("1").disabled=false;
+                return;
+            }
+            document.getElementById("1").disabled=false;
+            document.getElementById("2").disabled=false;
+        }
+
+    </script>
+</head>
+<body onload="setTimeout(()=>{loop()},2000);">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 id="info">Part A: Text Effect</h3>
+                        <img id="banner" height="200px" src="./images/ice.png"><br>
+                        <button id = "1" onclick="pre();" class = "btn btn-primary">Previous</button>
+                        <button id = "3" onclick="loop();" class = "btn btn-warning">Loop: Off</button>
+                        <button id = "2" onclick="next();" class = "btn btn-primary">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

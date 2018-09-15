@@ -1,0 +1,13 @@
+{
+"companyName": "OKu's Evil Company",
+"productName": "Client",
+"dataUrl": "Unity-NodeJS-Game-master.data.unityweb",
+"asmCodeUrl": "Unity-NodeJS-Game-master.asm.code.unityweb",
+"asmMemoryUrl": "Unity-NodeJS-Game-master.asm.memory.unityweb",
+"asmFrameworkUrl": "Unity-NodeJS-Game-master.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ge's Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        var scrollTo=id=>{
+            console.log(id);
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#"+id.toString()).offset().top
+            }, 500);
+        }
+        var links=['web','unity','ps','disc'];
+    </script>
+</head>
+<body  style="background-color: black;color: rgb(196, 196, 196)">
+    <div class="jumbotron" style="height: 100px;background-color:  rgb(56, 56, 56); padding-top:15px">
+        <h1><a href="https://johnge.tk"><img src="./images/logo2.png" height="80px" class="rounded-circle"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ge's Portfolio<h6 class="text-right"><a href="https://johnge.tk">JohnGe.tk</a></h6></h1>
+
+    </div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="card" style="background-color:  rgb(56, 56, 56)">
+                    <div class="card-body">
+                        <h2>About Me</h2>
+                        <br>
+                        <h4 class="text-left">I'm an ambitious <span class="text-success">&lt;coder&gt;</span> who is qualified for <span class="text-warning" onclick="scrollTo(links[0]);"><h4>web development</h4></span>, <span class="text-primary" onclick='scrollTo(links[1]);'>Unity game designing</span>, and developing <span class="text-danger">Java programs</span> and <span class="text-info" onclick='scrollTo(links[3]);'>Discord bot</span>.</h4>
+                        <h4 class="text-left">I'm also interested in <span class="text-danger">AI</span> and <span style="color:orange" onclick='scrollTo(links[2]);'>digital art design</span></h4>
+                        <br>
+                        <h4 class="text-left" ><a href="./my_resume.pdf">My Resume</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card" style="background-color:  rgb(56, 56, 56)">
+                    <div class="card-body">
+                        <img src="./images/pfp.png" width="90%">
+                        <h6>A random anime picture instead of me lol</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2>My Projects</h2>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card" style="background-color:  rgb(56, 56, 56)">
+                    <div class="card-body">
+                        <h2>Photoshop</h2>
+                        <iframe id="ps" src="slide_show2.html" style="height: 330px;width: 100%" ></iframe>
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card" style="background-color:  rgb(56, 56, 56)">
+                    <div class="card-body">
+                        <h2>Slide Show</h2>
+                        <iframe id="slide" src="slide_show.html" style="height: 330px;width: 100%" ></iframe>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="card" style="background-color:  rgb(56, 56, 56)">
+                    <iframe id="rps" src="../HW6/rps.html" style="height: 610px;width: 100%" ></iframe>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <div class="card" style="background-color:  rgb(56, 56, 56)">
+                    <div class="card-body">
+                        <h2 id="disc">Discord Bot</h2>
+                        <h5><img src="./images/cognitive-science.jpg" class="rounded-circle" height="120px"><a href="https://discord.gg/gUnbMfY">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click Here to Join COGS Discord Server</a></h5><br>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h5>
+                                    <ul class="text-left" >Using <a href="https://discord.js.org/#/">Discord.js</a>
+                                        <br>
+                                        <li style="margin: 10px"><span class="text-danger">3k+</span> lines of code!</li>
+                                        <li style="margin: 10px">30+ working commands</li>
+                                        <li style="margin: 10px">Working user <span class="text-primary">database</span></li>
+                                        <li style="margin: 10px">Efficient <span class="text-warning">query string</span> system</li>
+                                    </ul>
+                                </h5>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="./images/ss1.png" class="rounded" height="200px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card" style="background-color:  rgb(56, 56, 56)">
+                    <div class="card-body">
+                        <h2 id="web">Node.js Game</h2>
+                        <h6>
+                            I remade a popular 90s game and host it on <a href="https://aws.amazon.com/">amazon cloud Server</a>
+                            <a href="http://drugwars.okumura-todo-ge.tk/"><button class="btn btn-success">Play</button></a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="card" style="background-color:  rgb(56, 56, 56)">
+                    <div class="card-body">
+                        <h2 id="unity">Unity Game Design</h2>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-8" style="padding:0px">
+                                    <iframe frameBorder="0" src="./images/mc.mp4" width="100%" height="420px"></iframe>
+                            </div>
+                            <div class="col-sm-4">
+                                <h5>
+                                    <ul class="text-center" ><h3>Using <a href="https://unity3d.com/">Unity Engine</a></h3>                                        <span class="text-left">
+                                            <br>
+                                            <li style="margin: 10px">Minecraft Clone with <span class="text-success">C#</span></li>
+                                            <li style="margin: 10px">Only 1k+ lines of code</li>
+                                            <li style="margin: 10px">20 classes</li>
+                                            <li style="margin: 10px"><span class="text-warning">Multi-thread</span> rendering</li>
+                                            <li style="margin: 10px"><span class="text-info">Perlin-Noise</span> infinite terrain generation</li>
+                                            <li style="margin: 10px">Dynamic chunk loading/unloading</li>
+                                        </span>
+                                    </ul>
+                                </h5>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer font-small blue">
+
+        <div class="footer-copyright text-center py-3">I wish this has copyright :/
+        </div>
+    
+    </footer>
+</body>
+</html>

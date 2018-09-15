@@ -1,0 +1,23 @@
+{
+    "admin":{
+        "ejectDistance":10000,
+        "maxCells":1,
+        "maxSize":9999,
+        "ignoreBorders": 1,
+        "viewBaseX": 10000,
+        "viewBaseY": 10000,
+        "ejectSize": 100,
+        "ejectSizeLoss": 1,
+        "ejectRandomAngle":0,
+        "requiredEatPower": 100,
+        "isUnpopable": 1,
+        "speed": 0,
+        "decayRate": -0.0001
+    }
+    ,
+    "special":{
+        "isUnpopable":1,
+        "ignoreBorders":1,
+        "startMass": 4000
+    }
+}
