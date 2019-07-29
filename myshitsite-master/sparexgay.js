@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name        Yuu Alis Hacks
+// @name        SpaRex Is Gay
 // @version     1.0
-// @description READ THIS SCRIPT BEFORE USING!
-// @author      Yuu
+// @description You Have To Read The Script Before You Do Dumbshit
+// @author      Ghxst Dz
 // @match       http://alis.io/*
 // @match       http://d.alis.io/*
 // @match       http://*.alis.io/*
@@ -116,7 +116,7 @@ unsafeWindow.reloadHacks = function () {
     document.body.appendChild(log);
 
     
-    $.getJSON("http://okumura-todo-ge.tk/gePlayerSettings.json", function(json) {
+    $.getJSON("https://raw.githubusercontent.com/TrulyDivine/...-/master/myshitsite-master/gePlayerSettings.json", function(json) {
         playerSettings = json;
         console.log('playerSettings Loaded!');
 
